@@ -137,7 +137,7 @@ const ProjectDetails = () => {
         ...selectedProject,
         Features: selectedProject.Features || [],
         TechStack: selectedProject.TechStack || [],
-        Github: selectedProject.Github || "https://github.com/EkiZR",
+        Github: selectedProject.Github || "https://github.com/Bima Maulana",
       };
       setProject(enhancedProject);
     }
@@ -156,25 +156,25 @@ const ProjectDetails = () => {
     );
   }
 
-  const projectUrl = `https://ekizr.com/project/${toSlug(project.Title)}`;
+  const projectUrl = `https://Bima Maulana.com/project/${toSlug(project.Title)}`;
 
   return (
     <>
       <Helmet>
-        <title>{project.Title} — Eki Zulfar Rachman</title>
+        <title>{project.Title} — Bima Maulana </title>
         <meta
           name="description"
           content={
             project.Description
               ? project.Description.slice(0, 155)
-              : `Project ${project.Title} oleh Eki Zulfar Rachman — Frontend Web Developer.`
+              : `Project ${project.Title} oleh Bima Maulana  — Backend Web Developer.`
           }
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={projectUrl} />
         <meta
           property="og:title"
-          content={`${project.Title} — Eki Zulfar Rachman`}
+          content={`${project.Title} — Bima Maulana `}
         />
         <meta
           property="og:description"
@@ -192,8 +192,8 @@ const ProjectDetails = () => {
             "url": "${projectUrl}",
             "author": {
               "@type": "Person",
-              "name": "Eki Zulfar Rachman",
-              "url": "https://ekizr.com"
+              "name": "Bima Maulana ",
+              "url": "https://Bima Maulana.com"
             }
           }
         `}</script>

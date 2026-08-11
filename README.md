@@ -2,9 +2,9 @@
 
 Hello everyone\! 👋
 
-Let me introduce myself, I'm **Eki Zulfar Rachman**. On this occasion, I'd like to share the portfolio website project that I've developed. built with React and Supabase, featuring a public-facing site and an admin dashboard.
+Let me introduce myself, I'm **Bima Maulana **. On this occasion, I'd like to share the portfolio website project that I've developed. built with React and Supabase, featuring a public-facing site and an admin dashboard.
 
-**Live Demo:** [https://ekizr.com](https://ekizr.com)
+**Live Demo:** [https://Bima Maulana.com](https://Bima Maulana.com)
 
 ---
 
@@ -12,7 +12,7 @@ Let me introduce myself, I'm **Eki Zulfar Rachman**. On this occasion, I'd like 
 
 This project is built using modern web technologies:
 
-  - **ReactJS** - Frontend framework
+  - **ReactJS** - Backend framework
   - **Tailwind CSS** - Utility-first CSS framework
   - **Supabase** - Backend for portfolio data, certificates, and comment system
   - **AOS** - Animate On Scroll library
@@ -42,7 +42,7 @@ This project is built using modern web technologies:
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/EkiZR/Portofolio_V5.git
+git clone https://github.com/Bima Maulana/Portofolio_V5.git
 cd Portofolio_V5
 npm install
 ```
@@ -245,8 +245,8 @@ INSERT INTO public.portfolio_comments (
   created_at
 )
 SELECT
-  'developed by ekizr. This project is open-source and free to use.',
-  'ekizr',
+  'developed by Bima Maulana. This project is open-source and free to use.',
+  'Bima Maulana',
   'https://egwzigagwyrmwjsrebzx.supabase.co/storage/v1/object/public/profile-images/profile-images/1771939421615_xx2q8hgya6e.jpeg',
   true,
   now()
@@ -269,7 +269,7 @@ Go to **Table Editor → portfolio_comments → Enable Realtime**.
 
 ```sql
 INSERT INTO public.profiles (id, username, role)
-VALUES ('USER_UUID', 'eki', 'admin');
+VALUES ('USER_UUID', 'Bima Maulana', 'admin');
 ```
 
 ### 7. Run Locally
@@ -311,8 +311,8 @@ Upload the contents of the `dist/` folder to your hosting provider.
 
 ## Credits & Contact
 
-**Eki Zulfar Rachman**  
-Website: [eki.my.id](https://ekizr.com) · GitHub: [EkiZR](https://github.com/EkiZR)
+**Bima Maulana **  
+Website: [Bima Maulana.my.id](https://Bima Maulana.com) · GitHub: [Bima Maulana](https://github.com/Bima Maulana)
 
 Thanks to [LottieFiles](https://lottiefiles.com/free-animation/coding-NWhbxMOVgP) and Claude.
 

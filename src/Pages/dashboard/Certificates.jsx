@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from "../../supabase";
-import { Award, Upload, Trash2, ImageIcon, Plus } from 'lucide-react'
+import { Award, Upload, Trash2, ImageIcon, Plus, AlertTriangle } from 'lucide-react'
 
 const Card = ({ children, className = '' }) => (
   <div className={`relative group ${className}`}>
@@ -22,22 +22,34 @@ const SkeletonCard = () => (
 
 const CertCard = ({ cert, onDelete }) => {
   const [imgLoaded, setImgLoaded] = useState(false)
+  const [imgError, setImgError] = useState(false)
 
   return (
     <div className="relative group">
       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-2xl blur opacity-10 group-hover:opacity-30 transition duration-500" />
       <div className="relative bg-white/5 border border-white/12 rounded-2xl overflow-hidden">
-        {/* Skeleton shown until image loads */}
-        {!imgLoaded && (
+        {/* Skeleton shown until image loads or errors */}
+        {!imgLoaded && !imgError && (
           <div className="w-full aspect-[16/11.5] bg-white/5 animate-pulse" />
         )}
-        <img
-          src={cert.Img}
-          alt="Certificate"
-          onLoad={() => setImgLoaded(true)}
-          className={`w-full aspect-[16/11.5] object-cover group-hover:scale-105 transition-transform duration-500 ${imgLoaded ? 'block' : 'hidden'}`}
-        />
-        {imgLoaded && (
+
+        {/* Fallback shown when the file can't be rendered as an image (e.g. a PDF) */}
+        {imgError ? (
+          <div className="w-full aspect-[16/11.5] flex flex-col items-center justify-center gap-2 bg-white/5 text-gray-500">
+            <AlertTriangle className="w-6 h-6" />
+            <p className="text-xs">Format file tidak didukung</p>
+          </div>
+        ) : (
+          <img
+            src={cert.Img}
+            alt="Certificate"
+            onLoad={() => setImgLoaded(true)}
+            onError={() => setImgError(true)}
+            className={`w-full aspect-[16/11.5] object-cover group-hover:scale-105 transition-transform duration-500 ${imgLoaded ? 'block' : 'hidden'}`}
+          />
+        )}
+
+        {(imgLoaded || imgError) && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
             <button
               onClick={() => onDelete(cert.id)}

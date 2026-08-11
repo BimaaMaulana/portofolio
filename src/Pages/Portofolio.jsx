@@ -102,20 +102,20 @@ function a11yProps(index) {
   };
 }
 
-// techStacks tetap sama
+// techStacks — request ulang, urutan sesuai permintaan
 const techStacks = [
   { icon: "html.svg", language: "HTML" },
   { icon: "css.svg", language: "CSS" },
   { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
+  { icon: "golang.svg", language: "Go" },
+  { icon: "postgresql.svg", language: "PostgreSQL" },
+  { icon: "docker.svg", language: "Docker" },
+  { icon: "git.svg", language: "Git" },
+  { icon: "github.svg", language: "GitHub" },
+  { icon: "linux.svg", language: "Linux / WSL" },
+  { icon: "restapi.svg", language: "REST API" },
+  { icon: "nodejs.svg", language: "Node.js" },
   { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
 ];
 
 export default function FullWidthTabs() {
